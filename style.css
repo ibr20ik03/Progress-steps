@@ -1,0 +1,83 @@
+/* Main Rules */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f6f7fb;
+}
+
+
+/* Style Progress Steps */
+
+.progress_steps {
+    width: 350px;
+}
+
+.progress_steps .steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.progress_steps .steps .value_step {
+    position: absolute;
+    background-color: #e0e0e0;
+    width: calc(100% - 6px);
+    height: 4px;
+    left: 3px;
+    top: 50%;
+    transform: translate(-3px,-50%);
+    z-index: -1;
+}
+
+.progress_steps .steps .value_step span {
+    height: 100%;
+    background-color: #3498db;
+    display: block;
+    transition: all 0.2s linear;
+}
+
+.progress_steps .steps .step {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #e0e0e0;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #999;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    transition: all 0.3s linear;
+}
+
+.progress_steps .steps .step_1 {
+    border-color: #3498db;
+}
+
+.progress_steps .prev_and_next {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.progress_steps .prev_and_next button {
+    border: none;
+    border-radius: 7px;
+    padding: 10px 30px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.progress_steps .prev_and_next .next,
+.progress_steps .prev_and_next .prev {
+    background-color: #3498db;
+}
